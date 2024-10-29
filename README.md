@@ -4,11 +4,10 @@ Use a topology file with bond information (e.g., `.tpr`) and a trajectory file.
 
 ```python
 
-fol = 'example_folder'
+fol = 'example_folder/'
 cluster = Clustering_analysis(fol+'X.tpr', fol+'X.xtc')
 
 #Make the selection of the fragments - can be done by doing a selection of the residues and using the select_fragments method
-
 sel = cluster.u.select_atoms('resname A B')
 sel = cluster.select_fragments(sel)
 

@@ -126,11 +126,11 @@ class Clustering_analysis():
 
 #Initialize the class with the info of the trajectory
 #Use tpr (or any topology with bond information) and trajectory files
-fol = '/wrk/HS-GI-S6/'
-cluster = Clustering_analysis(fol+'04-HS-GI-S6-md.tpr', fol+'04-HS-GI-S6-md.xtc')
+fol = '/example_folder/'
+cluster = Clustering_analysis(fol+'X.tpr', fol+'X.xtc')
 
 #Make the selection of the fragments - can be done by doing a selection of the residues and using the select_fragments method
-sel = cluster.u.select_atoms('resname AGLCN AIDOA')
+sel = cluster.u.select_atoms('resname A B')
 sel = cluster.select_fragments(sel)
 
 #Perform the clustering analysis
