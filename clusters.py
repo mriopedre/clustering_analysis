@@ -100,7 +100,7 @@ class Clustering_analysis():
         return_matrix = []
         for ts in tqdm(self.u.trajectory):
             largest_cluster, clusters = self._calculate_cluster(self._gen_contact_matrix(sel, cutoff))
-            return_matrix.append([ts.time/1e3, largest_cluster, len(clusters), clusters])
+            return_matrix.append([ts.time/1e3, largest_cluster, len(clusters)])
         return np.stack(return_matrix, axis = 0)
     
     def save_clusters_to_xvg(self, cluster_data, output_file='clusters_data.xvg'):
@@ -122,11 +122,12 @@ class Clustering_analysis():
                 f.write(f"{row[0]:.3f} {row[1]} {row[2]} ")
                 f.write("\n")  # Marks the end of a dataset in XVG
 
+
 #Example Usage
 
 #Initialize the class with the info of the trajectory
-#Use tpr (or any topology with bond information) and trajectory files
-fol = '/example_folder/'
+#Use a topology file with bond information (e.g., `.tpr`) and a trajectory file.
+fol = 'example_folder/'
 cluster = Clustering_analysis(fol+'X.tpr', fol+'X.xtc')
 
 #Make the selection of the fragments - can be done by doing a selection of the residues and using the select_fragments method
