@@ -1,9 +1,11 @@
-# Initialize the class with the info of the trajectory
+# Clustering of fragments in MD trajectory
 
-Use a topology file with bond information (e.g., `.tpr`) and a trajectory file.
+Python code to calculate clustering of fragments (chains, molecules...) in MD trajectories.
 
 ```python
 
+#Initialize the class with the info of the trajectory
+#Use a topology file with bond information (e.g., `.tpr`) and a trajectory file.
 fol = 'example_folder/'
 cluster = Clustering_analysis(fol+'X.tpr', fol+'X.xtc')
 
