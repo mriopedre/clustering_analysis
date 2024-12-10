@@ -82,7 +82,7 @@ class ClusteringAnalysis:
             for row in cluster_data:
                 f.write(f"{row[0]:.3f} {row[1]} {row[2]}\n")
 
-
+#%%
 if __name__ == "__main__":
     # Example Usage
     #Initialize the class with the info of the trajectory

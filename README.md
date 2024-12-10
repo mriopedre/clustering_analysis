@@ -7,7 +7,7 @@ Python code to calculate clustering of fragments (chains, molecules...) in MD tr
 #Initialize the class with the info of the trajectory
 #Use a topology file with bond information (e.g., `.tpr`) and a trajectory file.
 fol = 'example_folder/'
-cluster = Clustering_analysis(fol+'X.tpr', fol+'X.xtc')
+cluster = ClusteringAnalysis(fol+'X.tpr', fol+'X.xtc')
 
 #Make the selection of the fragments - can be done by doing a selection of the residues and using the select_fragments method
 sel = cluster.u.select_atoms('resname A B')
